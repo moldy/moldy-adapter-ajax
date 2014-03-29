@@ -28,8 +28,6 @@ describe( 'collection', function () {
 				_person.should.have.a.property( 'name' );
 				_person.should.have.a.property( 'age' );
 				Object.keys( _person.$json() ).should.have.a.lengthOf( 3 );
-				console.log( _person.$json() );
-				console.log( '----------------' );
 			} );
 
 			_done();
