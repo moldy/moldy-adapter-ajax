@@ -1,4 +1,4 @@
-var Model = require( 'sg-model' ),
+var Model = require( 'moldy' ),
 	should = require( 'should' );
 
 describe( 'create', function () {
