@@ -6,7 +6,7 @@ Model.use( require( '../src' ) );
 describe( 'model-ajax-adapter', function () {
 
 	it( 'Tell the `Model` to use the `ajax` adapter', function () {
-		// Model.use( 'adapter', require('moldy-ajax-adapter') );
+		// Model.use( require('moldy-ajax-adapter') );
 	} );
 
 	require( './readme/create' );

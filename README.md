@@ -12,7 +12,7 @@
 Tell the `Model` to use the `ajax` adapter.
 
 ```js
-// Model.use( 'adapter', require('moldy-ajax-adapter') );
+// Model.use( require('moldy-ajax-adapter') );
 ```
 
 <a name="model-ajax-adapter-create"></a>
