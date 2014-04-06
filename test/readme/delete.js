@@ -3,11 +3,6 @@ var Model = require( 'moldy' ),
 
 describe( 'destroy', function () {
 
-	before( function () {
-		Model.useify.clear();
-		Model.use( 'adapter', require( '../src' ) );
-	} );
-
 	it( 'should `destroy` a model', function ( _done ) {
 		var personModel = new Model( 'person', {
 			key: 'guid',

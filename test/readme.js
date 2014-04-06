@@ -1,20 +1,18 @@
 var Model = require( 'moldy' ),
-	should = require( 'should' ),
-	sgModelAdapterAjax = require( '../src' );
+	should = require( 'should' );
 
-Model.useify.clear();
-Model.use( 'adapter', require( '../src' ) );
+Model.use( require( '../src' ) );
 
 describe( 'sg-model-adapter-ajax', function () {
 
 	it( 'Tell the `Model` to use the `ajax` adapter', function () {
-		// Model.use( 'adapter', sgModelAdapterAjax );
+		// Model.use( 'adapter', require('moldy-ajax-adapter') );
 	} );
 
-	require( './readme.create' );
-	require( './readme.get' );
-	require( './readme.collection' );
-	require( './readme.save' );
-	require( './readme.delete' );
+	require( './readme/create' );
+	require( './readme/get' );
+	require( './readme/collection' );
+	require( './readme/save' );
+	require( './readme/delete' );
 
 } );

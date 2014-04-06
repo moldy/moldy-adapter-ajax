@@ -3,11 +3,6 @@ var Model = require( 'moldy' ),
 
 describe( 'save', function () {
 
-	before( function () {
-		Model.useify.clear();
-		Model.use( 'adapter', require( '../src' ) );
-	} );
-
 	it( 'should `save` a model', function ( _done ) {
 		var personModel = new Model( 'person', {
 			key: 'guid',
