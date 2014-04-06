@@ -1,10 +1,10 @@
-var Model = require( 'moldy' ),
+var Moldy = require( 'moldy' ),
 	should = require( 'should' );
 
 describe( 'collection', function () {
 
 	it( 'should `get` a `collection`', function ( _done ) {
-		var personModel = new Model( 'person', {
+		var personMoldy = new Moldy( 'person', {
 			key: 'guid',
 			baseUrl: 'http://localhost:3000/api',
 			properties: {
@@ -13,24 +13,20 @@ describe( 'collection', function () {
 			}
 		} );
 
-		personModel.$collection( function ( _error, _people ) {
-
-			if ( _error ) {
-				return _done( _error );
-			}
+		personMoldy.$collection( function ( _error, _people ) {
 
 			_people.should.be.an.Array;
 			_people.should.have.a.lengthOf( 3 );
 
 			_people.forEach( function ( _person ) {
-				_person.should.be.a.Model;
+				_person.should.be.a.Moldy;
 				_person.should.have.a.property( 'guid' );
 				_person.should.have.a.property( 'name' );
 				_person.should.have.a.property( 'age' );
 				Object.keys( _person.$json() ).should.have.a.lengthOf( 3 );
 			} );
 
-			_done();
+			_done( _error );
 
 		} );
 	} );

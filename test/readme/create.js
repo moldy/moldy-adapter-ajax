@@ -1,10 +1,10 @@
-var Model = require( 'moldy' ),
+var Moldy = require( 'moldy' ),
 	should = require( 'should' );
 
 describe( 'create', function () {
 
 	it( 'should `create` by a property', function ( _done ) {
-		var personModel = new Model( 'person', {
+		var personMoldy = new Moldy( 'person', {
 			key: 'hash',
 			baseUrl: 'http://localhost:3000/api',
 			properties: {
@@ -13,16 +13,12 @@ describe( 'create', function () {
 			}
 		} );
 
-		personModel.name = 'David';
+		personMoldy.name = 'David';
 
-		personModel.$save( function ( _error, _david ) {
+		personMoldy.$save( function ( _error ) {
 
-			if ( _error ) {
-				return _done( _error );
-			}
-
-			_david.name.should.eql( 'David' );
-			_done();
+			personMoldy.name.should.eql( 'David' );
+			_done( _error );
 
 		} );
 	} );

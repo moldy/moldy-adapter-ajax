@@ -1,18 +1,18 @@
-var Model = require( 'moldy' ),
+var Moldy = require( 'moldy' ),
 	should = require( 'should' );
 
-Model.use( require( '../src' ) );
+Moldy.use( require( '../src' ) );
 
 describe( 'model-ajax-adapter', function () {
 
-	it( 'Tell the `Model` to use the `ajax` adapter', function () {
-		// Model.use( require('moldy-ajax-adapter') );
+	it( 'Tell the `Moldy` to use the `ajax` adapter', function () {
+		// Moldy.use( require('moldy-ajax-adapter') );
 	} );
 
 	require( './readme/create' );
 	require( './readme/get' );
 	require( './readme/collection' );
 	require( './readme/save' );
-	require( './readme/delete' );
+	require( './readme/destroy' );
 
 } );
