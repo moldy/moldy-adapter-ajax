@@ -12,7 +12,7 @@
 Tell the `Model` to use the `ajax` adapter.
 
 ```js
-// Model.use( 'adapter', sgModelAdapterAjax );
+// Model.use( 'adapter', require('moldy-ajax-adapter') );
 ```
 
 <a name="sg-model-adapter-ajax-create"></a>
