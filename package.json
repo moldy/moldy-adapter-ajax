@@ -1,7 +1,7 @@
 {
-	"name": "moldy-adapter-ajax",
+	"name": "moldy-ajax-adapter",
 	"version": "0.0.1",
-	"description": "",
+	"description": "An ajax adapter for `Moldy`",
 	"main": "src/index.js",
 	"scripts": {
 		"pretest": "./node_modules/.bin/forever start server.js",
@@ -10,14 +10,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/davidtsuji/moldy-adapter-ajax"
+		"url": "https://github.com/davidtsuji/moldy-ajax-adapter"
 	},
 	"author": "David Tsuji",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/davidtsuji/moldy-adapter-ajax/issues"
+		"url": "https://github.com/davidtsuji/moldy-ajax-adapter/issues"
 	},
-	"homepage": "https://github.com/davidtsuji/moldy-adapter-ajax",
+	"homepage": "https://github.com/davidtsuji/moldy-ajax-adapter",
 	"devDependencies": {
 		"mocha": "^1.18.2",
 		"should": "^3.1.4",
