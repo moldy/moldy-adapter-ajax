@@ -3,7 +3,7 @@ var Model = require( 'moldy' ),
 
 Model.use( require( '../src' ) );
 
-describe( 'sg-model-adapter-ajax', function () {
+describe( 'model-ajax-adapter', function () {
 
 	it( 'Tell the `Model` to use the `ajax` adapter', function () {
 		// Model.use( 'adapter', require('moldy-ajax-adapter') );

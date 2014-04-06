@@ -1,21 +1,21 @@
 # TOC
-   - [sg-model-adapter-ajax](#sg-model-adapter-ajax)
-     - [create](#sg-model-adapter-ajax-create)
-     - [get](#sg-model-adapter-ajax-get)
-     - [collection](#sg-model-adapter-ajax-collection)
-     - [save](#sg-model-adapter-ajax-save)
-     - [destroy](#sg-model-adapter-ajax-destroy)
+   - [model-ajax-adapter](#model-ajax-adapter)
+     - [create](#model-ajax-adapter-create)
+     - [get](#model-ajax-adapter-get)
+     - [collection](#model-ajax-adapter-collection)
+     - [save](#model-ajax-adapter-save)
+     - [destroy](#model-ajax-adapter-destroy)
 <a name=""></a>
  
-<a name="sg-model-adapter-ajax"></a>
-# sg-model-adapter-ajax
+<a name="model-ajax-adapter"></a>
+# model-ajax-adapter
 Tell the `Model` to use the `ajax` adapter.
 
 ```js
 // Model.use( 'adapter', require('moldy-ajax-adapter') );
 ```
 
-<a name="sg-model-adapter-ajax-create"></a>
+<a name="model-ajax-adapter-create"></a>
 ## create
 should `create` by a property.
 
@@ -38,7 +38,7 @@ personModel.$save( function ( _error, _david ) {
 } );
 ```
 
-<a name="sg-model-adapter-ajax-get"></a>
+<a name="model-ajax-adapter-get"></a>
 ## get
 should `get` by a property.
 
@@ -62,7 +62,7 @@ personModel.$get( {
 } );
 ```
 
-<a name="sg-model-adapter-ajax-collection"></a>
+<a name="model-ajax-adapter-collection"></a>
 ## collection
 should `get` a `collection`.
 
@@ -92,7 +92,7 @@ personModel.$collection( function ( _error, _people ) {
 } );
 ```
 
-<a name="sg-model-adapter-ajax-save"></a>
+<a name="model-ajax-adapter-save"></a>
 ## save
 should `save` a model.
 
@@ -121,7 +121,7 @@ personModel.$get( {
 } );
 ```
 
-<a name="sg-model-adapter-ajax-destroy"></a>
+<a name="model-ajax-adapter-destroy"></a>
 ## destroy
 should `destroy` a model.
 
