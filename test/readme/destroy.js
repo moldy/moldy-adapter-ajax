@@ -4,7 +4,7 @@ var Moldy = require( 'moldy' ),
 describe( 'destroy', function () {
 
 	it( 'should `destroy` a model', function ( _done ) {
-		var personMoldy = new Moldy( 'person', {
+		var personMoldy = Moldy.extend( 'person', {
 			key: 'guid',
 			baseUrl: 'http://localhost:3000/api',
 			properties: {
@@ -15,13 +15,13 @@ describe( 'destroy', function () {
 
 		personMoldy.$get( {
 			guid: '5f55821f-3a28-45c3-b91d-7df927a863d8'
-		}, function ( _error ) {
+		}, function ( _error, _person ) {
 
 			if ( _error ) {
 				return _done( _error );
 			}
 
-			personMoldy.$destroy( _done );
+			_person.$destroy( _done );
 
 		} );
 	} );

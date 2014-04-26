@@ -4,14 +4,14 @@ var Moldy = require( 'moldy' ),
 describe( 'create', function () {
 
 	it( 'should `create` by a property', function ( _done ) {
-		var personMoldy = new Moldy( 'person', {
+		var personMoldy = Moldy.extend( 'person', {
 			key: 'hash',
 			baseUrl: 'http://localhost:3000/api',
 			properties: {
 				name: '',
 				age: ''
 			}
-		} );
+		} ).create();
 
 		personMoldy.name = 'David';
 

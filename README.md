@@ -20,14 +20,14 @@ Tell the `Moldy` to use the `ajax` adapter.
 should `create` by a property.
 
 ```js
-var personMoldy = new Moldy( 'person', {
+var personMoldy = Moldy.extend( 'person', {
 	key: 'hash',
 	baseUrl: 'http://localhost:3000/api',
 	properties: {
 		name: '',
 		age: ''
 	}
-} );
+} ).create();
 personMoldy.name = 'David';
 personMoldy.$save( function ( _error ) {
 	personMoldy.name.should.eql( 'David' );
@@ -40,7 +40,7 @@ personMoldy.$save( function ( _error ) {
 should `get` by a property.
 
 ```js
-var personMoldy = new Moldy( 'person', {
+var personMoldy = Moldy.extend( 'person', {
 	key: 'guid',
 	baseUrl: 'http://localhost:3000/api',
 	properties: {
@@ -50,8 +50,8 @@ var personMoldy = new Moldy( 'person', {
 } );
 personMoldy.$get( {
 	guid: '5f55821f-3a28-45c3-b91d-7df927a863d8'
-}, function ( _error ) {
-	personMoldy.name.should.eql( 'Bennett Sanchez' );
+}, function ( _error, _person ) {
+	_person.name.should.eql( 'Bennett Sanchez' );
 	_done( _error );
 } );
 ```
@@ -61,7 +61,7 @@ personMoldy.$get( {
 should `get` a `collection`.
 
 ```js
-var personMoldy = new Moldy( 'person', {
+var personMoldy = Moldy.extend( 'person', {
 	key: 'guid',
 	baseUrl: 'http://localhost:3000/api',
 	properties: {
@@ -88,7 +88,7 @@ personMoldy.$collection( function ( _error, _people ) {
 should `save` a model.
 
 ```js
-var personMoldy = new Moldy( 'person', {
+var personMoldy = Moldy.extend( 'person', {
 	key: 'guid',
 	baseUrl: 'http://localhost:3000/api',
 	properties: {
@@ -98,12 +98,12 @@ var personMoldy = new Moldy( 'person', {
 } );
 personMoldy.$get( {
 	guid: '5f55821f-3a28-45c3-b91d-7df927a863d8'
-}, function ( _error ) {
+}, function ( _error, _person ) {
 	if ( _error ) {
 		return _done( _error );
 	}
-	personMoldy.name = 'Mr Bennett Sanchez';
-	personMoldy.$save( _done );
+	_person.name = 'Mr Bennett Sanchez';
+	_person.$save( _done );
 } );
 ```
 
@@ -112,7 +112,7 @@ personMoldy.$get( {
 should `destroy` a model.
 
 ```js
-var personMoldy = new Moldy( 'person', {
+var personMoldy = Moldy.extend( 'person', {
 	key: 'guid',
 	baseUrl: 'http://localhost:3000/api',
 	properties: {
@@ -122,11 +122,11 @@ var personMoldy = new Moldy( 'person', {
 } );
 personMoldy.$get( {
 	guid: '5f55821f-3a28-45c3-b91d-7df927a863d8'
-}, function ( _error ) {
+}, function ( _error, _person ) {
 	if ( _error ) {
 		return _done( _error );
 	}
-	personMoldy.$destroy( _done );
+	_person.$destroy( _done );
 } );
 ```
 
