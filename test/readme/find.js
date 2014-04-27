@@ -1,9 +1,9 @@
 var Moldy = require( 'moldy' ),
 	should = require( 'should' );
 
-describe( 'collection', function () {
+describe( 'find', function () {
 
-	it( 'should `get` a `collection`', function ( _done ) {
+	it( 'should `find`', function ( _done ) {
 		var personMoldy = Moldy.extend( 'person', {
 			key: 'guid',
 			baseUrl: 'http://localhost:3000/api',
@@ -13,7 +13,7 @@ describe( 'collection', function () {
 			}
 		} );
 
-		personMoldy.$collection( function ( _error, _people ) {
+		personMoldy.$find( function ( _error, _people ) {
 
 			_people.should.be.an.Array;
 			_people.should.have.a.lengthOf( 3 );

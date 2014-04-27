@@ -1,9 +1,9 @@
 var Moldy = require( 'moldy' ),
 	should = require( 'should' );
 
-describe( 'get', function () {
+describe( 'findOne', function () {
 
-	it( 'should `get` by a property', function ( _done ) {
+	it( 'should `findOne` by a property', function ( _done ) {
 		var personMoldy = Moldy.extend( 'person', {
 			key: 'guid',
 			baseUrl: 'http://localhost:3000/api',
@@ -13,7 +13,7 @@ describe( 'get', function () {
 			}
 		} );
 
-		personMoldy.$get( {
+		personMoldy.$findOne( {
 			guid: '5f55821f-3a28-45c3-b91d-7df927a863d8'
 		}, function ( _error, _person ) {
 

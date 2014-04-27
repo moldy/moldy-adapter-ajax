@@ -13,7 +13,7 @@ describe( 'save', function () {
 			}
 		} );
 
-		personMoldy.$get( {
+		personMoldy.$findOne( {
 			guid: '5f55821f-3a28-45c3-b91d-7df927a863d8'
 		}, function ( _error, _person ) {
 

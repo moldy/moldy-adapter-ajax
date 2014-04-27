@@ -1,8 +1,8 @@
 # TOC
    - [model-ajax-adapter](#model-ajax-adapter)
      - [create](#model-ajax-adapter-create)
-     - [get](#model-ajax-adapter-get)
-     - [collection](#model-ajax-adapter-collection)
+     - [findOne](#model-ajax-adapter-findone)
+     - [find](#model-ajax-adapter-find)
      - [save](#model-ajax-adapter-save)
      - [destroy](#model-ajax-adapter-destroy)
 <a name=""></a>
@@ -35,9 +35,9 @@ personMoldy.$save( function ( _error ) {
 } );
 ```
 
-<a name="model-ajax-adapter-get"></a>
-## get
-should `get` by a property.
+<a name="model-ajax-adapter-findone"></a>
+## findOne
+should `findOne` by a property.
 
 ```js
 var personMoldy = Moldy.extend( 'person', {
@@ -48,7 +48,7 @@ var personMoldy = Moldy.extend( 'person', {
 		age: ''
 	}
 } );
-personMoldy.$get( {
+personMoldy.$findOne( {
 	guid: '5f55821f-3a28-45c3-b91d-7df927a863d8'
 }, function ( _error, _person ) {
 	_person.name.should.eql( 'Bennett Sanchez' );
@@ -56,9 +56,9 @@ personMoldy.$get( {
 } );
 ```
 
-<a name="model-ajax-adapter-collection"></a>
-## collection
-should `get` a `collection`.
+<a name="model-ajax-adapter-find"></a>
+## find
+should `find`.
 
 ```js
 var personMoldy = Moldy.extend( 'person', {
@@ -69,7 +69,7 @@ var personMoldy = Moldy.extend( 'person', {
 		age: ''
 	}
 } );
-personMoldy.$collection( function ( _error, _people ) {
+personMoldy.$find( function ( _error, _people ) {
 	_people.should.be.an.Array;
 	_people.should.have.a.lengthOf( 3 );
 	_people.forEach( function ( _person ) {
@@ -96,7 +96,7 @@ var personMoldy = Moldy.extend( 'person', {
 		age: ''
 	}
 } );
-personMoldy.$get( {
+personMoldy.$findOne( {
 	guid: '5f55821f-3a28-45c3-b91d-7df927a863d8'
 }, function ( _error, _person ) {
 	if ( _error ) {
@@ -120,7 +120,7 @@ var personMoldy = Moldy.extend( 'person', {
 		age: ''
 	}
 } );
-personMoldy.$get( {
+personMoldy.$findOne( {
 	guid: '5f55821f-3a28-45c3-b91d-7df927a863d8'
 }, function ( _error, _person ) {
 	if ( _error ) {
