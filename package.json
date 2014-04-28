@@ -35,6 +35,7 @@
     "sc-is": "0.0.3",
     "sc-haskey": "0.0.2",
     "superagent": "^0.17.0",
-    "sc-cast": "0.0.4"
+    "sc-cast": "0.0.4",
+    "moldy-base-adapter": "0.0.1"
   }
 }
