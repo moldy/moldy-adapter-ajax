@@ -27,7 +27,7 @@
     "forever": "^0.10.11",
     "sc-guid": "0.0.4",
     "underscore": "^1.6.0",
-    "moldy": "^1.1.0",
+    "moldy": "git://github.com/dervalp/moldy.git",
     "jshint-stylish": "^0.1.5",
     "gulp-jshint": "^1.5.3"
   },
@@ -35,7 +35,6 @@
     "sc-is": "0.0.3",
     "sc-haskey": "0.0.2",
     "superagent": "^0.17.0",
-    "sc-cast": "0.0.4",
-    "moldy-base-adapter": "0.0.1"
+    "sc-cast": "0.0.4"
   }
 }
