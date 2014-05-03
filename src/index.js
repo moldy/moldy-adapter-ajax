@@ -61,4 +61,4 @@ module.exports = baseAdapter.extend({
 
     req( this, data, 'delete', url, done );
   }
-};
+});
