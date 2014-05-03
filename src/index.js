@@ -1,5 +1,6 @@
 var request = require( 'superagent' ),
   cast = require( 'sc-cast' ),
+  baseAdapter = require( 'moldy-base-adapter' ),
   is = require( 'sc-is' ),
   hasKey = require( 'sc-haskey' );
 
@@ -39,7 +40,7 @@ var req = function ( _moldy, _data, _method, _url, _callback ) {
 
 };
 
-module.exports = {
+module.exports = baseAdapter.extend({
   name: "ajax",
   create: function ( data, done ) {
     req( this, data, 'post', this.$url(), done );
@@ -60,4 +61,4 @@ module.exports = {
 
     req( this, data, 'delete', url, done );
   }
-};
+});
