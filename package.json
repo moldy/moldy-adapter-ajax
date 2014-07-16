@@ -27,7 +27,7 @@
     "forever": "^0.10.11",
     "sc-guid": "0.0.4",
     "underscore": "^1.6.0",
-    "moldy": "^1.1.4",
+    "moldy": "*",
     "jshint-stylish": "^0.1.5",
     "gulp-jshint": "^1.5.3"
   },
