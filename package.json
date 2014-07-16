@@ -1,6 +1,6 @@
 {
   "name": "moldy-ajax-adapter",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "An ajax adapter for `Moldy`",
   "main": "src/index.js",
   "scripts": {
